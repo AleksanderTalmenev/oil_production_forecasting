@@ -23,7 +23,7 @@ def tsplot(data, lags=None, figsize=(10, 6), style='bmh'):
         
         
         data.plot(ax=ts_ax)
-        ts_ax.set_title(f'Критерий Дики-Фуллера p-value={np.round(sm.tsa.adfuller(data)[1], decimals=2)}',
+        ts_ax.set_title(f'Критерий Дики-Фуллера p-value={np.round(sm.tsa.adfuller(data)[1], decimals=3)}',
                         fontsize=12)
         smt.graphics.plot_acf(data, lags=lags, ax=acf_ax, alpha=0.5, markersize=4)
         smt.graphics.plot_pacf(data, lags=lags, ax=pacf_ax, alpha=0.5, markersize=4)
